@@ -1,0 +1,32 @@
+spring:  
+  profiles:
+    active: dev
+  
+server:
+  port: 8013
+
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/sensordbexample
+  
+mqtt:
+  options:
+    automatic-reconnect: true
+    clean-session: true
+    connection-timeout: 10
+    #user-name: dackng             
+    #password: 123456    
+    #keep-alive-interval: 100    
+  hostname: tcp://192.168.1.14:1883
+  bindings:
+    humidity: dackng/humidity-state 
+    rain: dackng/rain-state 
+    open-valve: dackng/open-valve
+    opened-valve: dackng/opened-valve
+    close-valve: dackng/close-valve
+    closed-valve: dackng/closed-valve
+
+    

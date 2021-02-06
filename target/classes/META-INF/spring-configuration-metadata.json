@@ -1,0 +1,144 @@
+{
+  "groups": [
+    {
+      "name": "mqtt",
+      "type": "pe.com.dackng.example.shared.YamlConfig",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig"
+    },
+    {
+      "name": "mqtt.bindings",
+      "type": "pe.com.dackng.example.shared.YamlConfig$Bindings",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig",
+      "sourceMethod": "public pe.com.dackng.example.shared.YamlConfig.Bindings getBindings() "
+    },
+    {
+      "name": "mqtt.options",
+      "type": "org.eclipse.paho.client.mqttv3.MqttConnectOptions",
+      "sourceType": "pe.com.dackng.example.config.MqttConfig",
+      "sourceMethod": "public org.eclipse.paho.client.mqttv3.MqttConnectOptions mqttConnectOptions() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "mqtt.bindings.close-valve",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig$Bindings"
+    },
+    {
+      "name": "mqtt.bindings.closed-valve",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig$Bindings"
+    },
+    {
+      "name": "mqtt.bindings.humidity",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig$Bindings"
+    },
+    {
+      "name": "mqtt.bindings.open-valve",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig$Bindings"
+    },
+    {
+      "name": "mqtt.bindings.opened-valve",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig$Bindings"
+    },
+    {
+      "name": "mqtt.bindings.rain",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig$Bindings"
+    },
+    {
+      "name": "mqtt.hostname",
+      "type": "java.lang.String",
+      "sourceType": "pe.com.dackng.example.shared.YamlConfig"
+    },
+    {
+      "name": "mqtt.options.automatic-reconnect",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.clean-session",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.connection-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.custom-web-socket-headers",
+      "type": "java.util.Properties",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.debug",
+      "type": "java.util.Properties",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.executor-service-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.https-hostname-verification-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.keep-alive-interval",
+      "type": "java.lang.Integer",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.max-inflight",
+      "type": "java.lang.Integer",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.max-reconnect-delay",
+      "type": "java.lang.Integer",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.mqtt-version",
+      "type": "java.lang.Integer",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.password",
+      "type": "java.lang.Character[]",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.s-s-l-hostname-verifier",
+      "type": "javax.net.ssl.HostnameVerifier",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.s-s-l-properties",
+      "type": "java.util.Properties",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.server-u-r-is",
+      "type": "java.lang.String[]",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.socket-factory",
+      "type": "javax.net.SocketFactory",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    },
+    {
+      "name": "mqtt.options.user-name",
+      "type": "java.lang.String",
+      "sourceType": "org.eclipse.paho.client.mqttv3.MqttConnectOptions"
+    }
+  ],
+  "hints": []
+}
