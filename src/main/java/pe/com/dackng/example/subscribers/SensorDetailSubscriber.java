@@ -34,8 +34,8 @@ public class SensorDetailSubscriber implements CommandLineRunner{
 	@Override
     public void run(String... args) throws Exception {
         CountDownLatch receivedSignal = new CountDownLatch(1);
-        this.onLandHumidity(receivedSignal);
-        this.onRainIntensity(receivedSignal);
+        onLandHumidity(receivedSignal);
+        onRainIntensity(receivedSignal);
 
         receivedSignal.await(1, TimeUnit.MINUTES);
         
@@ -48,7 +48,7 @@ public class SensorDetailSubscriber implements CommandLineRunner{
             
             log.info("[LAND HUMIDITY] Message received: topic={}, payload={}", topic, payload);
             
-            sensorDetailRepository.save(this.convert(payload, Parameter.LAND_HUMIDITY.getValue()));
+            sensorDetailRepository.save(convert(payload, Parameter.LAND_HUMIDITY.getValue()));
             
             receivedSignal.countDown();
         });
@@ -60,7 +60,7 @@ public class SensorDetailSubscriber implements CommandLineRunner{
             
 			log.info("[RAIN INTENSITY] Message received: topic={}, payload={}", topic, payload);
             
-			sensorDetailRepository.save(this.convert(payload, Parameter.RAIN_INTENSITY.getValue()));
+			sensorDetailRepository.save(convert(payload, Parameter.RAIN_INTENSITY.getValue()));
             
 			receivedSignal.countDown();
         });
@@ -69,7 +69,7 @@ public class SensorDetailSubscriber implements CommandLineRunner{
 	private SensorDetail convert(String payload, String parameter) {
 		String[] array = payload.split(",");
 		return SensorDetail.builder()
-				.code(array[PayloadIndex.SENSOR_CODE.getValue()])
+				.code(array[PayloadIndex.CLIENT_ID.getValue()])
 				.createdAt(LocalDateTime.now())
 				.parameter(parameter)
 				.value(Double.valueOf(array[PayloadIndex.VALUE.getValue()]))

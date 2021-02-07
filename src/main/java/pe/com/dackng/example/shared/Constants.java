@@ -34,7 +34,7 @@ public class Constants {
 	@AllArgsConstructor
 	@NoArgsConstructor
 	public enum PayloadIndex{
-		SENSOR_CODE(0), VALUE(1);
+		CLIENT_ID(0), VALUE(1);
 		private int value;
 	}
 	
